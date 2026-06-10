@@ -1,0 +1,28 @@
+seed: 42
+image_size: 256
+batch_size: 32
+num_workers: 0
+val_per_class: 2
+epochs: 50
+num_classes: 100
+
+paths:
+  data_root: data
+  train_dir: data/train
+  test_dir: data/test
+  sample_submission: data/sample_submission.csv
+  checkpoint_dir: outputs/checkpoints
+  log_dir: outputs/logs
+  feature_dir: outputs/features
+  metrics_dir: outputs/metrics
+
+optimizer:
+  head_lr: 1.0e-3
+  backbone_lr: 1.0e-4
+  weight_decay: 0.01
+
+scheduler:
+  type: cosine
+  warmup_epochs: 5
+
+label_smoothing: 0.1

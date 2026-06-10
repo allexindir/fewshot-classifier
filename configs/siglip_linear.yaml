@@ -1,0 +1,18 @@
+defaults:
+  - base
+
+backbone:
+  name: siglip2
+  model_name: google/siglip2-so400m-patch14-384
+  pretrained: true
+  freeze: true
+
+head:
+  type: mlp
+  hidden: 512
+  dropout: 0.4
+
+lora:
+  enabled: false
+
+run_name: siglip_linear

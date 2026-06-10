@@ -1,0 +1,15 @@
+defaults:
+  - base
+
+backbone:
+  name: dinov3_vitl16
+  pretrained: true
+  freeze: true
+
+head:
+  type: linear
+
+lora:
+  enabled: false
+
+run_name: dinov3_linear
