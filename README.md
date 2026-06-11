@@ -10,7 +10,7 @@
 
 Requires Python 3.11 and an Apple Silicon Mac (MPS backend) or CUDA GPU.
 
-The code automatically sets `PYTORCH_ENABLE_MPS_FALLBACK=1` and uses `num_workers=0` to avoid macOS multiprocessing issues.
+Setting PYTORCH_ENABLE_MPS_FALLBACK before training is slightly redundant here but it avoids ambiguity on code excecution order. This was causing me some major crashes on mac, but likely not needed for CUDA.
 
 To reproduce the model used for kaggle run the following (WARNING: training takes a very long time):
 
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 PYTORCH_ENABLE_MPS_FALLBACK=1 python scripts/train.py --config configs/dinov3_lora.yaml
 PYTORCH_ENABLE_MPS_FALLBACK=1 python scripts/train.py --config configs/siglip_linear.yaml
 python scripts/predict_ensemble.py \
---checkpoints outputs/checkpoints/dinov3_lora_best.pth outputs/checkpoints/siglip/linear_best.pth \
+--checkpoints outputs/checkpoints/dinov3_lora_best.pth outputs/checkpoints/siglip_linear_best.pth \
 --weights 1.0 1.0 \
 --out submission.csv
 ```
