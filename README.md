@@ -4,6 +4,8 @@
 
 ## Results
 
+![kaggle score](kaggle_score.png)
+
 ## Setup
 
 Requires Python 3.11 and an Apple Silicon Mac (MPS backend) or CUDA GPU.
@@ -25,6 +27,7 @@ python scripts/predict_ensemble.py \
 ## Weights
 
 Pre-trained model weights (contains best trained run for dino and siglip): 
+https://drive.google.com/drive/folders/1QZ9GpTE5Nr7WnTD4cI1VK2Vfink-GqXP?usp=share_link
 
 ## Reproducibility
 
