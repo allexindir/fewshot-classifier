@@ -31,7 +31,8 @@ https://drive.google.com/drive/folders/1QZ9GpTE5Nr7WnTD4cI1VK2Vfink-GqXP?usp=sha
 
 ## Reproducibility
 
+- Note: it seems there may be slight differences in output depending on weather MPS or CUDA was used!!
+
 - Default seed: 42
 - Set via `--seed N` or in the config YAML
 - Deterministic algorithms enabled (`torch.use_deterministic_algorithms(True, warn_only=True)`)
-- Small variance expected due to MPS non-determinism; typical accuracy spread is ~0.5% across seeds
