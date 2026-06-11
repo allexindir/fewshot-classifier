@@ -10,7 +10,7 @@ Requires Python 3.11 and an Apple Silicon Mac (MPS backend) or CUDA GPU.
 
 The code automatically sets `PYTORCH_ENABLE_MPS_FALLBACK=1` and uses `num_workers=0` to avoid macOS multiprocessing issues.
 
-To reproduce the model used for kaggle run the following:
+To reproduce the model used for kaggle run the following (WARNING: training takes a very long time):
 
 ```bash
 pip install -r requirements.txt
