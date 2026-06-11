@@ -1,6 +1,6 @@
 # CSE 144 Final Project: Few-Shot Image Classification
 
-100-class image classification with only ~10 training images per class. Uses a frozen DINOv3 ViT-L/16 backbone with a lightweight trainable head, LoRA adaptation on the last transformer blocks, heavy data augmentation, and test-time augmentation (TTA) ensembled with SIGLIP2 with an MLP head.
+100-class image classification with only ~10 training images per class. Uses a frozen DINOv3 ViT-L/16 backbone with a lightweight trainable head, LoRA adaptation on the last transformer blocks, ensembled with SIGLIP2 with an MLP head, heavy data augmentation, and test-time augmentation (TTA).
 
 ## Results
 
